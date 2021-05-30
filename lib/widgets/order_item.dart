@@ -37,7 +37,7 @@ class _OrderitemState extends State<Orderitem> {
           if (_expand)
             Container(
               padding: EdgeInsets.symmetric(horizontal: 15, vertical: 4),
-              height: min(widget.order.products.length * 20.0 + 10, 100),
+              height: min(widget.order.products.length * 20.0 + 20, 100),
               child: ListView(
                 children: widget.order.products
                     .map(
@@ -52,7 +52,7 @@ class _OrderitemState extends State<Orderitem> {
                             ),
                           ),
                           Text(
-                            '${e.quantity}x \$${e.price}',
+                            '${e.quantity} x \$${e.price}',
                             style: TextStyle(
                               fontSize: 18,
                               color: Colors.grey,
