@@ -3,7 +3,7 @@ import '../screens/orders_screen.dart';
 import '../screens/user_product_screen.dart';
 import 'package:provider/provider.dart';
 import '../provider/auth.dart';
-import '../screens/auth_screen.dart';
+import '../helpers/custom_route.dart';
 
 class AapDrawer extends StatelessWidget {
   @override
@@ -30,6 +30,10 @@ class AapDrawer extends StatelessWidget {
             onTap: () {
               Navigator.of(context)
                   .pushReplacementNamed(OrdersScreen.routeName);
+
+              // Navigator.of(context).pushReplacement(CustomRoute(
+              //   builder: (ctx)=> OrdersScreen(),
+              // ));
             },
           ),
           Divider(),

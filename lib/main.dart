@@ -12,6 +12,7 @@ import './screens/edit_product_screen.dart';
 import './screens/auth_screen.dart';
 import './provider/auth.dart';
 import './screens/splash_screen.dart';
+import './helpers/custom_route.dart';
 
 void main() {
   runApp(
@@ -52,6 +53,12 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.pink,
             accentColor: Colors.amber,
             fontFamily: 'Lato',
+            pageTransitionsTheme: PageTransitionsTheme(
+              builders: {
+                TargetPlatform.android: CustomPageTransitionBuilder(),
+                TargetPlatform.iOS: CustomPageTransitionBuilder(),
+              },
+            ),
           ),
           initialRoute: '/',
           routes: {
